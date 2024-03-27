@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARANASI VENKAT MADHAV - Full Stack Developer</title>
+    <style>
+        background {
+            color: white;
+            background-image: url(ttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIHe1NMps-yibI_NE9GqFahYzV5ka9BaK6Q&usqp=CAU);
+        }
+
+        header {
+            color: white;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            color: white;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .content-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIHe1NMps-yibI_NE9GqFahYzV5ka9BaK6Q&usqp=CAU);
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer {
+            background-image: url(data:image/jpeg;base64,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);
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .connect-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .connect-icons a {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .connect-icons a:hover {
+            color: #007bff;
+        }
+
+        header {
+            background-color: #FFA500;
+            color: white;
+
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .print-button {
+            display: none;
+        }
+
+        content {
+
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-details {
+            background-image: url(ttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDIHe1NMps-yibI_NE9GqFahYzV5ka9BaK6Q&usqp=CAU);
+        }
+
+        color {
+            color: white;
+        }
+
+        header1 {
+            color: red;
+            text-align: center;
+
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none,noarchive" />
+</head>
+
+<body>
+
+
+    <script src="script.js"></script>
+
+    <header>
+
+
+        <background>
+            <big>WELCOME TO MY PROFILE</big></br>
+            </br>
+            <big>Student</big>
+            <section>
+
+                <img src="https://media.licdn.com/dms/image/D5603AQEIMo037zyKPQ/profile-displayphoto-shrink_400_400/0/1704362510144?e=1714608000&v=beta&t=6JKdmcMGzMDVEmi3DloF8fZyK3pKulERLWHfhfqzzug" alt="Profile Picture" class="profile-picture">
+                </br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc44o1KcDcUxYxHLVP02gNx1P0cqDQ9gINF-smrMAC7DmX0lVdS1PUMTVpRUgnVHwgfMg&usqp=CAU" alt="Logo" class="logo">
+                <p>Male</p>
+                <h1 color="red">VARANASI VENKAT MADHAV</h1>
+                <p color="red">Fellow at NxtWave’s CCBP 4.0 Academy | Knows Python, Front End Development | Looking for internships and jobs.</p>
+
+            </section>
+        </background>
+    </header>
+
+
+    <div class="main-details">
+        <section id="sectionlearnMoreButton">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    I'm a student at NxtWave's CCBP 4.0 Academy, learning full-stack development with a specialization in 4.0 technologies. I'm a huge fan of coding challenges and hands-on projects. Get ready for new challenges in tech with Industry's first IRC 4.0.
+                </p>
+                <p>
+                    Greetings! 👋 I'm VARANASI VENKAT MADHAV , a dynamic individual currently honing my skills as a Full-Stack Developer with a specialization in 4.0 technologies at NxtWave's CCBP 4.0 Academy. 🌐
+                </p>
+                <ul>
+                    <li>🎓 Graduate in Civil Engineering at Wellfare inistutute of science and technology managament.</li>
+                    <li>💻 Proficient in Python, Front-End Development, and Cyber Security.</li>
+                    <li>🚀 Completed hands-on projects including a basic static website design.</li>
+                    <li>🧠 Excited about coding challenges and exploring new horizons in technology.</li>
+                </ul>
+            </section>
+
+            <section id="skills" class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>💻 Full-Stack Development</li>
+                    <li>🐍 Python Programming</li>
+                    <li>🖥 Front-End Development</li>
+                </ul>
+            </section>
+
+            <section class="achievements">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>🏆 Recognized for completing the 10x communication workshop.</li>
+                    <li>🚀 Actively engaged in the NxtWave community, contributing to #nxtwaveccbp and #nxtwaverahulattuluri discussions.</li>
+                    <li>💪 Successfully managed multiple projects as a Freelancer, displaying versatility and adaptability.</li>
+                </ul>
+            </section>
+
+            <section class="opportunities">
+                <h2>Open to Opportunities</h2>
+                <ul>
+                    <li>Actively seeking internships to apply and enhance my skills.</li>
+                    <li>Eager to collaborate on exciting projects and contribute to innovative solutions.</li>
+                </ul>
+            </section>
+
+
+
+
+            <section id="skills" class="skills">
+                <h2>Top Skills</h2>
+                <ul type="rectangle">
+                    <li>💻 Full-Stack Development</li>
+                    <li>🐍 Python Programming</li>
+                    <li>🖥 Front-End Development</li>
+                    <li>🗣 Communication Skills</li>
+                    <li>🔍 Microsoft SQL Server</li>
+                    <li>💽 Data Base Management System</li>
+                    <li>📎 MS-Office</li>
+                    <li>⌨️ Typing</li>
+                    <li>📝 Microsoft Word</li>
+                    <li>🖥️ MS-Access</li>
+                    <li>📊 Microsoft Excel</li>
+                    <li>🌐 Internet</li>
+                    <li>📄 Word</li>
+                    <li>📊 Microsoft PowerPoint</li>
+                    <li>🗒️ Notepad</li>
+                </ul>
+            </section>
+
+
+
+            <section class="experience-education">
+                <h2>Experience & Education</h2>
+                <p><strong>NxtWave</strong> - Online learning,(may 2023 - feb 2024)</p>
+                <p><strong>Wellfare inistutute of science and technology managament </strong> - (May 2020 - 2023)</p>
+                <p><strong>Behera Technical Campus</strong> - Diploma In Civil Engineering (August 2017 - June 2020)</p>
+                <p><strong>Ravindra bharathi school</strong> - SSC(2017)</p>
+            </section>
+
+            <section class="contact">
+                <h2>Contact</h2>
+                <p></p>
+                <p>Mobile: 7013257515</p>
+                <p>Email: <a href="mailto:madhavvaranasi026@gmail.com">madhavvaranasi026@gmail.com</a></p>
+                <p>LinkedIn: <a href="www.linkedin.com/in/varanasi-venkat-madhav-b19268271" target="_blank">linkedin.com/in/varanasi-venkat-madhav</a></p>
+
+            </section>
+
+    </div>
+
+    <div class="main-details">
+        <section class="let-connect">
+            <h2>Let's Connect!</h2>
+            <div class="connect-icons">
+                <a href="mailto:madhavvaranasi026@gmail.com">📧</a>
+                <a href="https://www.linkedin.com/in/varanasi-venkat-madhav-b19268271" target="_blank">🔗</a>
+            </div>
+        </section>
+    </div>
+    <div class="main-details">
+        <section class="content">
+            <p>THIS IS FOR PRINT DOCUMENT</p>
+            <p> &copy; Copyright 2023 HTML.CSS.JS.am </p>
+
+
+            <button onclick="printPage()">Print Page</button>
+
+            <script>
+                function printPage() {
+                    window.print();
+                }
+            </script>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>Let's shape the future of technology together! 🚀 #TechEnthusiast #FullStackDeveloper #Python #CCBP4.0 #OpenToOpportunities</p>
+    </footer>
+    <button class="print-button" onclick="printDocument()">Print Document</button>
+
+    <script>
+        function printDocument() {
+            window.print();
+        }
+    </script>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
